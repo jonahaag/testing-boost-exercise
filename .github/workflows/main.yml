@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "Install dependencies"
-        run: sudo apt install cmake libeigen3-dev libyaml-cpp-dev
+        run: sudo apt install cmake libeigen3-dev libyaml-cpp-dev libboost-all-dev
       - name: "Create build directory"
         run: mkdir build 
       - name: "Configure CMake and build" 
