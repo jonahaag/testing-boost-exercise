@@ -45,7 +45,5 @@ jobs:
           name: build
       - name: "Unzip artifact"
         run: tar -xf build.tar
-      - name: "Go to build directory" 
-        run: cd build
-      - name: "Run tests"
-        run: make test
+      - name: "Run tests" 
+        run: cd build && make test
