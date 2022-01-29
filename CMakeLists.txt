@@ -1,3 +1,4 @@
+set (CMAKE_CXX_STANDARD 11)
 cmake_minimum_required(VERSION "3.12")
 project("sidemade")
 
@@ -31,4 +32,5 @@ target_include_directories(testsidemade PRIVATE ${PROJECT_SOURCE_DIR}/src)
 target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework Eigen3::Eigen yaml-cpp)
 
 add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=MatrixSolverTests/*)
+add_test(NAME "MatrixIOTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=MatrixIOTests/*)
 add_test(NAME "ConfigurationTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=ConfigurationTests/* WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tests)
