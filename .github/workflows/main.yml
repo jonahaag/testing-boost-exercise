@@ -12,7 +12,7 @@ jobs:
       - name: "Check style of src"
         run: clang-format --dry-run -Werror src/*
       - name: "Check style of tests"
-        run: clang-format --dry-run -Werror tests/*
+        run: clang-format --dry-run -Werror tests/*.cpp
   build:
     needs: style
     runs-on: ubuntu-latest
