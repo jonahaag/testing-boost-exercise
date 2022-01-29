@@ -25,7 +25,7 @@ jobs:
       - name: "Configure CMake and build" 
         run: cd build && cmake .. && make -j
       - name: "Prepare for artifact upload"
-        run: tar -cvf build.tar /build
+        run: tar -cvf build.tar build
       - name: "Artifact upload"
         uses: actions/upload-artifact@v2
         with:
